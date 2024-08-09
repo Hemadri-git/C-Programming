@@ -1,0 +1,8 @@
+
+{
+    "files.exclude": {
+        "**/*.exe":true
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "git.ignoreLimitWarning": true
+}
