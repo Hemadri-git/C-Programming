@@ -1,35 +1,38 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-    int a[10], n, c=0,i, j;
-    printf("enter number ");
-    scanf("%d" , &n);
+int main() {
+    int n;
+
     
-    printf("input as: ");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
 
-      printf("output as: ");
-    for (int i = 0; i < n; i++)
-    {
-      for (c = 0, j = 1; j <= n; j++)
-      {
-         if (a[i]%j == 0)
-         {
-            c++;
-         }
-      }
-      if (c==2)
-         {
-            printf("%d ", a[i]);
-         }
-         
-      
-    }
-  
-    
+    printf("Prime numbers in the array are: ");
+    for (int i = 0; i < n; i++) {
+        int num = arr[i];
+        if (num <= 1) {
+            continue;  
+        }
+        int isPrime = 1;  
 
+        for (int j = 2; j * j <= num; j++) {
+            if (num % j == 0) {
+                isPrime = 0;  
+                break;
+            }
+        }
+
+        if (isPrime) {
+            printf("%d ", num);
+        }
+    }
+
+    return 0;
 }
