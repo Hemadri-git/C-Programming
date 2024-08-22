@@ -3,12 +3,13 @@
 int main()
 {
     int a[5], n, even, odd, i;
-    printf("enter a number: ");
+    printf("enter array size number: ");
     scanf("%d", &n);
-
+    
+    printf("input elements: ");
     for (int  i = 0; i < n; i++)
     {
-        printf("element - %d: ", i);
+        
         scanf("%d", &a[i]);
     }
     
